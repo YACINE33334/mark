@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختر طريقة الدفع - Hostinger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="main-container">
+            <!-- Right Column (60%): Payment Methods -->
+            <div class="payment-column">
+                <h1 class="main-title">اختر طريقة الدفع</h1>
+                
+                <!-- Credit Card Payment Section -->
+                <div class="payment-section">
+                    <div class="section-header">
+                        <h2 class="section-title">بطاقة</h2>
+                        <div class="card-logos">
+                            <div class="card-logo">VISA</div>
+                            <div class="card-logo">Mastercard</div>
+                            <div class="card-logo">AMERICAN EXPRESS</div>
+                            <div class="card-logo">DISCOVER</div>
+                        </div>
+                    </div>
+                    
+                    <form id="paymentForm" class="payment-form">
+                        <div class="form-group">
+                            <label for="cardholderName">الاسم على البطاقة (اسمك)</label>
+                            <input 
+                                type="text" 
+                                id="cardName" 
+                                name="cardholderName" 
+                                placeholder="اسمك"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cardNumber">رقم البطاقة</label>
+                            <input 
+                                type="text" 
+                                id="cardNumber" 
+                                name="cardNumber" 
+                                placeholder="0000 0000 0000 0000"
+                                maxlength="19"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">تاريخ الانتهاء</label>
+                                <input 
+                                    type="text" 
+                                    id="expiryDate" 
+                                    name="expiryDate" 
+                                    placeholder="شهر / سنة"
+                                    maxlength="7"
+                                    required
+                                >
+                            </div>
+                            <div class="form-group">
+                                <label for="cvc">CVC</label>
+                                <input 
+                                    type="text" 
+                                    id="cvc" 
+                                    name="cvc" 
+                                    placeholder="CVC"
+                                    maxlength="4"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            إرسال الدفع
+                        </button>
+                        
+                        <div class="security-info">
+                            <svg class="lock-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>مدفوعات منخفضة وآمنة</span>
+                        </div>
+                        
+                        <div class="legal-text">
+                            تأكد أنك قد اطلعت على <a href="#" class="legal-link">شروط الخدمة</a> و<a href="#" class="legal-link">سياسة الخصوصية</a> قبل إتمام عملية الشراء. بتأكيد إتمام عملية الشراء، فإنك توافق على شروط الخدمة وتؤكد اطلاعك على سياسة الخصوصية. يمكنك إلغاء الدفعات المتكررة في أي وقت.
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- PayPal Option -->
+                <div class="payment-option" id="paypalOption">
+                    <div class="option-content">
+                        <div class="option-left">
+                            <span class="option-label">PayPal</span>
+                        </div>
+                        <div class="option-right">
+                            <div class="paypal-logo">
+                                <span style="color: #003087; font-weight: 700; font-size: 18px;">Pay</span><span style="color: #009CDE; font-weight: 700; font-size: 18px;">Pal</span>
+                            </div>
+                            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Google Pay Option -->
+                <div class="payment-option" id="googlePayOption">
+                    <div class="option-content">
+                        <div class="option-left">
+                            <span class="option-label">Google Pay</span>
+                        </div>
+                        <div class="option-right">
+                            <div class="googlepay-logo">
+                                <span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC04;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span>
+                                <span style="color: #5F6368; margin-right: 4px;">Pay</span>
+                            </div>
+                            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Payment Methods -->
+                <div class="payment-option" id="additionalMethods">
+                    <div class="option-content">
+                        <div class="option-left">
+                            <span class="option-label">طرق دفع إضافية</span>
+                        </div>
+                        <div class="option-right">
+                            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Left Column (40%): Order Summary -->
+            <div class="summary-column">
+                <div class="order-summary">
+                    <h2 class="summary-title">ملخص الطلب</h2>
+                    
+                    <div class="summary-items" id="summaryItems">
+                        <!-- سيتم ملؤها ديناميكياً من JavaScript -->
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-total">
+                        <div class="total-label">المجموع</div>
+                        <div class="total-amount" id="totalAmount">US$ 0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
